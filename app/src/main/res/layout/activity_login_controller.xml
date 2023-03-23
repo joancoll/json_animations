@@ -1,0 +1,120 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".LoginController">
+
+    <!-- Background background -->
+    <ImageView
+        android:id="@+id/iv_blob"
+        android:layout_width="wrap_content"
+        android:layout_height="240dp"
+        android:layout_centerInParent="true"
+        android:layout_gravity="center"
+        android:layout_marginTop="5dp"
+        android:adjustViewBounds="true"
+        android:scaleType="fitXY"
+        android:src="@drawable/log_in_blob"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        android:contentDescription="@string/background" />
+
+    <!-- Logo superior -->
+    <ImageView
+        android:id="@+id/iv_logo"
+        android:layout_width="wrap_content"
+        android:layout_height="190dp"
+        android:layout_centerInParent="true"
+        android:layout_gravity="center"
+        android:adjustViewBounds="true"
+        android:scaleType="fitXY"
+        android:src="@drawable/logo"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        android:contentDescription="@string/logo_image" />
+
+    <!-- Titol (welcome back) -->
+    <TextView
+        android:id="@+id/textView"
+        android:layout_marginTop="250dp"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:fontFamily="@font/poppins"
+        android:letterSpacing="0.1"
+        android:text="@string/welcome_back"
+        android:textColor="#252422"
+        android:textSize="30sp"
+        android:textStyle="bold"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <!-- Inputs -->
+    <TextView
+        android:id="@+id/et_input_user"
+        android:layout_width="280dp"
+        android:layout_height="78dp"
+        android:background="@drawable/custom_input"
+        android:drawablePadding="12dp"
+        android:layout_marginTop="30dp"
+        android:paddingHorizontal="20dp"
+        android:text="@string/ask_for_password"
+        android:gravity="center"
+        android:textColor="#252422"
+        android:textSize="15sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textView" />
+
+    <EditText
+        android:id="@+id/et_input_password"
+        android:layout_width="280dp"
+        android:layout_height="60dp"
+        android:background="@drawable/custom_input"
+        android:drawableStart="@drawable/custom_ic_password"
+        android:drawablePadding="12dp"
+        android:layout_marginTop="30dp"
+        android:hint="@string/password"
+        android:inputType="textPassword"
+        android:paddingHorizontal="20dp"
+        android:textColor="#252422"
+        android:textSize="15sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/et_input_user"
+        android:autofillHints="" />
+
+    <Button
+        android:id="@+id/btn_next"
+        android:layout_width="280dp"
+        android:layout_height="65dp"
+        android:backgroundTint="#faedcd"
+        android:fontFamily="@font/poppins"
+        android:text="@string/login"
+        android:layout_marginTop="30dp"
+        android:textAllCaps="false"
+        android:textColor="#252422"
+        android:textSize="16sp"
+        android:textStyle="bold"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/et_input_password"
+        app:shapeAppearanceOverlay="@style/btn_round" />
+
+    <!-- Animació -->
+    <com.airbnb.lottie.LottieAnimationView
+        android:id="@+id/loginResultAnimation"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_margin="16dp"
+        android:layout_weight="1"
+        android:visibility="gone"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

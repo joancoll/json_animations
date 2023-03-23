@@ -1,0 +1,174 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:fillViewport="true">
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        tools:context=".MainActivity">
+
+        <androidx.constraintlayout.widget.Guideline
+            android:id="@+id/gl_esquerre"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            app:layout_constraintGuide_percent="0.10" />
+
+        <androidx.constraintlayout.widget.Guideline
+            android:id="@+id/gl_dreta"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            app:layout_constraintGuide_percent="0.90" />
+
+        <!-- Titol -->
+        <TextView
+            android:id="@+id/tv_titol"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="30dp"
+            android:gravity="center"
+            android:text="@string/all_tracks"
+            android:fontFamily="@font/poppins"
+            android:letterSpacing="0.1"
+            android:textColor="#252422"
+            android:textSize="30sp"
+            android:textStyle="bold"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <TextView
+            android:id="@+id/tv_info_like"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="15dp"
+            android:gravity="center"
+            android:text="@string/heart_animation_hint"
+            android:textColor="#ef233c"
+            android:fontFamily="@font/poppins"
+            android:textSize="15sp"
+            android:textStyle="bold"
+            app:layout_constraintTop_toBottomOf="@+id/tv_titol" />
+
+        <!-- Primera cursa -->
+        <ImageView
+            android:id="@+id/photo_race_1"
+            android:layout_width="0dp"
+            android:layout_height="200dp"
+            android:layout_gravity="start"
+            android:layout_marginTop="15dp"
+            android:src="@drawable/photo_race_1"
+            app:layout_constraintEnd_toStartOf="@+id/gl_dreta"
+            app:layout_constraintStart_toStartOf="@+id/gl_esquerre"
+            app:layout_constraintTop_toBottomOf="@+id/tv_info_like"
+            android:contentDescription="@string/race_image" />
+
+        <TextView
+            android:id="@+id/title_race_1"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:gravity="center"
+            android:text="@string/lake_tour"
+            android:layout_marginStart="15dp"
+            android:textColor="#252422"
+            android:fontFamily="@font/poppins"
+            android:textSize="15sp"
+            android:textStyle="bold"
+            app:layout_constraintBottom_toBottomOf="@+id/lav_like1"
+            app:layout_constraintStart_toEndOf="@+id/lav_like1"
+            app:layout_constraintTop_toTopOf="@+id/lav_like1" />
+
+        <com.airbnb.lottie.LottieAnimationView
+            android:id="@+id/lav_like1"
+            android:layout_width="60dp"
+            android:layout_height="60dp"
+            android:layout_marginTop="5dp"
+            android:layout_weight="1"
+            app:layout_constraintStart_toStartOf="@+id/gl_esquerre"
+            app:layout_constraintTop_toBottomOf="@+id/photo_race_1"
+            app:srcCompat="@drawable/twitter_like" />
+
+        <!-- Segona cursa -->
+        <ImageView
+            android:id="@+id/photo_race_2"
+            android:layout_width="0dp"
+            android:layout_height="200dp"
+            android:layout_gravity="start"
+            android:layout_marginTop="15dp"
+            android:src="@drawable/photo_race_2"
+            app:layout_constraintEnd_toStartOf="@+id/gl_dreta"
+            app:layout_constraintStart_toStartOf="@+id/gl_esquerre"
+            app:layout_constraintTop_toBottomOf="@+id/lav_like1"
+            android:contentDescription="@string/race_image" />
+
+        <TextView
+            android:id="@+id/title_race_2"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:gravity="center"
+            android:text="@string/puig_clara"
+            android:layout_marginStart="15dp"
+            android:textColor="#252422"
+            android:fontFamily="@font/poppins"
+            android:textSize="15sp"
+            android:textStyle="bold"
+            app:layout_constraintBottom_toBottomOf="@+id/lav_like2"
+            app:layout_constraintStart_toEndOf="@+id/lav_like2"
+            app:layout_constraintTop_toTopOf="@+id/lav_like2" />
+
+        <com.airbnb.lottie.LottieAnimationView
+            android:id="@+id/lav_like2"
+            android:layout_width="60dp"
+            android:layout_height="60dp"
+            android:layout_marginTop="5dp"
+            android:layout_weight="1"
+            app:layout_constraintStart_toStartOf="@+id/gl_esquerre"
+            app:layout_constraintTop_toBottomOf="@+id/photo_race_2"
+            app:srcCompat="@drawable/twitter_like" />
+
+        <!-- Tercera Cursa -->
+        <ImageView
+            android:id="@+id/photo_race_3"
+            android:layout_width="0dp"
+            android:layout_height="200dp"
+            android:layout_gravity="start"
+            android:layout_marginTop="15dp"
+            android:src="@drawable/photo_race_3"
+            app:layout_constraintEnd_toStartOf="@+id/gl_dreta"
+            app:layout_constraintStart_toStartOf="@+id/gl_esquerre"
+            app:layout_constraintTop_toBottomOf="@+id/lav_like2"
+            android:contentDescription="@string/race_image" />
+
+        <TextView
+            android:id="@+id/title_race_3"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:gravity="center"
+            android:text="@string/puig_colomer"
+            android:layout_marginStart="15dp"
+            android:textColor="#252422"
+            android:fontFamily="@font/poppins"
+            android:textSize="15sp"
+            android:textStyle="bold"
+            app:layout_constraintBottom_toBottomOf="@+id/lav_like3"
+            app:layout_constraintStart_toEndOf="@+id/lav_like3"
+            app:layout_constraintTop_toTopOf="@+id/lav_like3" />
+
+        <com.airbnb.lottie.LottieAnimationView
+            android:id="@+id/lav_like3"
+            android:layout_width="60dp"
+            android:layout_height="60dp"
+            android:layout_marginTop="5dp"
+            android:layout_weight="1"
+            android:layout_marginBottom="30dp"
+            app:layout_constraintStart_toStartOf="@+id/gl_esquerre"
+            app:layout_constraintTop_toBottomOf="@+id/photo_race_3"
+            app:srcCompat="@drawable/twitter_like" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</ScrollView>

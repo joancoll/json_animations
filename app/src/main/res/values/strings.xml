@@ -1,0 +1,15 @@
+<resources>
+    <string name="app_name">JSON Animations</string>
+    <string name="logo_image">Logo image</string>
+    <string name="background">Background</string>
+    <string name="welcome_back">Welcome back!!</string>
+    <string name="ask_for_password">Enter password: 1 right password, another for wrong password testing</string>
+    <string name="password">Password</string>
+    <string name="login">Login</string>
+    <string name="all_tracks">All tracks:</string>
+    <string name="heart_animation_hint">Hit the hearts to see animations</string>
+    <string name="lake_tour">La volta a l\'Estany</string>
+    <string name="puig_clara">Puig Clarà</string>
+    <string name="puig_colomer">Puig de\'n Colomer</string>
+    <string name="race_image">race image</string>
+</resources>
